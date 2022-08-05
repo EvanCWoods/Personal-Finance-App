@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// GLOBAL IMPORTS
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+// IMPORTS FOR COMPONENTS
+import LandingTop from "./Components/Landing/LandingTop/LandingTop";
+// IMPORTS FOR STYLES
+import "./Styles/root.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingTop />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
